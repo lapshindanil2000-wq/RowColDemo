@@ -35,10 +35,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    // Пример 1: Column с выравниванием по правому краю (horizontalAlignment = Alignment.End)
-    Column(
-        horizontalAlignment = Alignment.End,
-        modifier = modifier.width(250.dp)
+    // Пример с SpaceEvenly - равные отступы везде
+    Row(
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = modifier.width(1000.dp)
     ) {
         TextCell("1")
         TextCell("2")
@@ -68,4 +68,3 @@ fun GreetingPreview() {
         MainScreen()
     }
 }
-// Пример
