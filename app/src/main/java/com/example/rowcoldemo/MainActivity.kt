@@ -34,7 +34,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    // Здесь будет основной интерфейс приложения
+    Row(modifier) {
+        TextCell("1")
+        TextCell("2")
+        TextCell("3")
+    }
 }
 
 @Composable
