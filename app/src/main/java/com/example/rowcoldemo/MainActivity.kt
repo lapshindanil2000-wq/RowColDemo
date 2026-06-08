@@ -34,10 +34,30 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row(modifier) {
-        TextCell("1")
-        TextCell("2")
-        TextCell("3")
+    Column(modifier) {
+        // Первая строка с тремя колонками
+        Row {
+            Column {
+                TextCell("1")
+                TextCell("2")
+                TextCell("3")
+            }
+            Column {
+                TextCell("4")
+                TextCell("5")
+                TextCell("6")
+            }
+            Column {
+                TextCell("7")
+                TextCell("8")
+            }
+        }
+        // Вторая строка
+        Row {
+            TextCell("9")
+            TextCell("10")
+            TextCell("11")
+        }
     }
 }
 
