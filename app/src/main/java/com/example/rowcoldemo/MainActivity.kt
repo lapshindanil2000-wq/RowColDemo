@@ -35,14 +35,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    // Пример с SpaceEvenly - равные отступы везде
-    Row(
-        horizontalArrangement = Arrangement.SpaceEvenly,
-        modifier = modifier.width(1000.dp)
-    ) {
-        TextCell("1")
-        TextCell("2")
-        TextCell("3")
+    // Демонстрация модификаторов RowScope - разное выравнивание для каждого дочернего элемента
+    Row(modifier = modifier.height(300.dp)) {
+        TextCell("1", Modifier.align(Alignment.Top))
+        TextCell("2", Modifier.align(Alignment.CenterVertically))
+        TextCell("3", Modifier.align(Alignment.Bottom))
     }
 }
 
