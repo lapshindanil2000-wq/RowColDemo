@@ -35,9 +35,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    // Демонстрация выравнивания по умолчанию (верхний левый угол)
-    Row(
-        modifier = modifier.size(width = 400.dp, height = 200.dp)
+    // Пример 1: Column с выравниванием по правому краю (horizontalAlignment = Alignment.End)
+    Column(
+        horizontalAlignment = Alignment.End,
+        modifier = modifier.width(250.dp)
     ) {
         TextCell("1")
         TextCell("2")
