@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -35,11 +34,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    // Демонстрация модификаторов RowScope - разное выравнивание для каждого дочернего элемента
-    Row(modifier = modifier.height(300.dp)) {
-        TextCell("1", Modifier.align(Alignment.Top))
-        TextCell("2", Modifier.align(Alignment.CenterVertically))
-        TextCell("3", Modifier.align(Alignment.Bottom))
+    // Демонстрация модификатора weight() для распределения ширины
+    Row(modifier = modifier.fillMaxWidth()) {
+        TextCell("1", Modifier.weight(weight = 0.2f, fill = true))
+        TextCell("2", Modifier.weight(weight = 0.4f, fill = true))
+        TextCell("3", Modifier.weight(weight = 0.3f, fill = true))
     }
 }
 
